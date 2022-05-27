@@ -14,7 +14,7 @@
     >{{ i + 1}}</li> -->
     <ng-container *ngFor="let image of images; let i = index;">
       <li 
-      *ngIf="i < 5"
+      *ngIf="checkWindowIndex(i)"
       class="page-link" 
       [ngClass]="{ active: i === currentPage}" 
       (click)="currentPage = i"
