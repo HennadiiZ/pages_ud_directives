@@ -6,6 +6,11 @@
     (click)="Prev()"
     >Prev</li>
 
+    <li 
+    class="page-link" 
+    *ngIf="currentPage > 2"
+    >...</li>
+
     <!-- <li 
     *ngFor="let image of images; let i = index;" 
     class="page-link " 
@@ -20,6 +25,11 @@
       (click)="currentPage = i"
       >{{ i + 1}}</li>
     </ng-container>
+
+    <li 
+    class="page-link"
+    *ngIf="currentPage < images.length - fixedNumver" 
+    >...</li>
 
     <li 
     class="page-link" 

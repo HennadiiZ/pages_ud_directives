@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   currentPage = 0; 
+  fixedNumver = 3
   
   images = [
     {
@@ -93,7 +94,7 @@ export class AppComponent {
   }
 
   checkWindowIndex(i: number){
-      return Math.abs(this.currentPage - i) < 5;
+      return Math.abs(this.currentPage - i) < this.fixedNumver;
   }
 
 
