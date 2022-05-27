@@ -74,11 +74,6 @@ export class AppComponent {
 
   ];
 
-
-  // changeActiveClass(i: number){
-  //   this.currentPage = i;
-  // }
-
   Prev(){
     this.currentPage--
     if(this.currentPage < 0){
@@ -96,6 +91,5 @@ export class AppComponent {
   checkWindowIndex(i: number){
       return Math.abs(this.currentPage - i) < this.fixedNumver;
   }
-
-
+  
 }
