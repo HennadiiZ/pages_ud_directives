@@ -6,12 +6,17 @@
     (click)="Prev()"
     >Prev</li>
 
-    <li 
+    <!-- <li 
     *ngFor="let image of images; let i = index;" 
     class="page-link " 
     [ngClass]="{ active: i === currentPage}" 
     (click)="changeActiveClass(i)"
-    >{{ i + 1}}</li>
+    >{{ i + 1}}</li> -->
+    <li 
+    *ngFor="let image of images; let i = index;" 
+    class="page-link " 
+    [ngClass]="{ active: i === currentPage}" 
+    ><a (click)="currentPage = i">{{ i + 1}}</a></li>
 
     <li 
     class="page-link" 

@@ -35,9 +35,9 @@ export class AppComponent {
   ];
 
 
-  changeActiveClass(i: number){
-    this.currentPage = i;
-  }
+  // changeActiveClass(i: number){
+  //   this.currentPage = i;
+  // }
 
   Prev(){
     this.currentPage--
