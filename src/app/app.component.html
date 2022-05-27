@@ -11,7 +11,7 @@
     *ngIf="currentPage > fixedNumver - 1"
     >...</li>
 
-    <ng-container *ngFor="let image of images; let i = index;">
+    <ng-container *appTimes='images.length; let i = index'>
       <li 
       *ngIf="checkWindowIndex(i)"
       class="page-link" 
@@ -30,8 +30,6 @@
     [appClass]="{ disabled: images.length -1 === currentPage}"
     (click)="Next()"
     >Next</li>
-
-
   </ul>
 </nav>
 
@@ -40,6 +38,4 @@
   <img [src]="images[currentPage].url">
 </div>
 
-<ul *appTimes='images.length'>
-  <li>Hi there!!!</li>
-</ul>
+
