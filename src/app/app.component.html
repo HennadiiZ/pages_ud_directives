@@ -1,8 +1,8 @@
 <nav  aria-label="Page navigation">
-  <ul [appClass]="'green'" class="pagination justify-content-center">
+  <ul class="pagination justify-content-center">
     <li 
     class="page-link" 
-    [ngClass]="{ disabled: !currentPage}"
+    [appClass]="{ disabled: !currentPage}"
     (click)="Prev()"
     >Prev</li>
 
@@ -15,7 +15,7 @@
       <li 
       *ngIf="checkWindowIndex(i)"
       class="page-link" 
-      [ngClass]="{ active: i === currentPage}" 
+      [appClass]="{ active: i === currentPage}" 
       (click)="currentPage = i"
       >{{ i + 1}}</li>
     </ng-container>
@@ -27,7 +27,7 @@
 
     <li 
     class="page-link" 
-    [ngClass]="{ disabled: images.length -1 === currentPage}"
+    [appClass]="{ disabled: images.length -1 === currentPage}"
     (click)="Next()"
     >Next</li>
 
