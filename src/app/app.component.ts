@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   currentPage = 0; 
+  string!: boolean;
   
   images = [
     {
@@ -40,8 +41,8 @@ export class AppComponent {
 
   Prev(){
     this.currentPage--
-    if(this.currentPage < 1){
-      this.currentPage = this.images.length - 1
+    if(this.currentPage < 0){
+       this.currentPage = this.images.length - 1
     }
   }
 
