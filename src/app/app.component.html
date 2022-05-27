@@ -3,8 +3,10 @@
     <!-- <li class="page-item">{{ i + 1}}{{ image.title }}{{ image.url }}</li> -->
     <li 
     *ngFor="let image of images; let i = index;" 
-    class="page-link active" 
+    class="page-link " 
+    [ngClass]="{ active: i === currentPage}" 
     aria-current="page"
+    (click)="changeActiveClass(i)"
     >{{ i + 1}}</li>
   </ul>
 </nav>

@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  currentPage = 0; 
   
-
   images = [
     {
       title: "at the beach",
@@ -32,4 +32,9 @@ export class AppComponent {
     },
 
   ];
+
+
+  changeActiveClass(i: number){
+    this.currentPage = i;
+  }
 }
