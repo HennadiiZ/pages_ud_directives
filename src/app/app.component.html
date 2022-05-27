@@ -1,13 +1,24 @@
 <nav aria-label="Page navigation ">
   <ul class="pagination">
-    <!-- <li class="page-item">{{ i + 1}}{{ image.title }}{{ image.url }}</li> -->
+    <li 
+    class="page-link" 
+    [ngClass]="{ disabled: 0 === currentPage}"
+    (click)="Prev()"
+    >Prev</li>
+
     <li 
     *ngFor="let image of images; let i = index;" 
     class="page-link " 
     [ngClass]="{ active: i === currentPage}" 
-    aria-current="page"
     (click)="changeActiveClass(i)"
     >{{ i + 1}}</li>
+
+    <li 
+    class="page-link" 
+    [ngClass]="{ disabled: images.length -1 === currentPage}"
+    (click)="Next()"
+    >Next</li>
+
   </ul>
 </nav>
 

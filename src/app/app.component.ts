@@ -37,4 +37,20 @@ export class AppComponent {
   changeActiveClass(i: number){
     this.currentPage = i;
   }
+
+  Prev(){
+    this.currentPage--
+    if(this.currentPage < 1){
+      this.currentPage = this.images.length - 1
+    }
+  }
+
+  Next(){
+    this.currentPage++
+    if(this.currentPage > this.images.length - 1){
+      this.currentPage = 0
+    }
+  }
+
+
 }
